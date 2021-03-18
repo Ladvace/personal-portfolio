@@ -1,23 +1,25 @@
 <script>
-  import { Router, Route, Link } from "svelte-navigator";
+  import { Router, Route } from "svelte-navigator";
   import Main from "./pages/main.svelte";
+  import Projects from "./pages/projects.svelte";
+  import NotFound from "./pages/notFound.svelte";
 </script>
 
 <Router>
-  <main>
-    <Route path="/">
-      <Main />
-    </Route>
+  <div>
+    <Route path="projects" component={Projects} />
 
     <Route path="about">
       <h3>About</h3>
-      <p>That's what it's all about!</p>
     </Route>
-  </main>
+
+    <Route path="/" exact component={Main} />
+    <Route component={NotFound} />
+  </div>
 </Router>
 
 <style>
-  main {
+  div {
     display: flex;
     justify-content: center;
   }

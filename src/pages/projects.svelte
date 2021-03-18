@@ -1,29 +1,25 @@
 <script>
   import { Link } from "svelte-navigator";
-  import { faCog } from "@fortawesome/free-solid-svg-icons";
-  import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-  import Fa from "svelte-fa";
+  import NavBar from "../components/navbar.svelte";
 </script>
 
 <div class="container">
+  <NavBar />
   <main>
-    <h1>Hi!✋ I'm Gianmarco a Front End 💻 based in Italy</h1>
-    <div class="icons">
-      <Fa icon={faCog} />
-      <Fa icon={faGithub} />
-      <Fa icon={faLinkedin} />
-    </div>
-    <div class="cards">
+    <h1>Projects</h1>
+    <div class="projects">
       <Link to="projects">
-        <div class="card">Projects</div>
+        <div class="project">Project 1</div>
       </Link>
       <Link to="about">
-        <div class="card">About</div>
+        <div class="project">Project 22</div>
       </Link>
-      <!-- <div class="card">Blog</div> -->
-      <!-- <div class="card">FOUR</div>
-      <div class="card">FIVE</div>
-      <div class="card">SIX</div> -->
+      <Link to="about">
+        <div class="project">Project 3</div>
+      </Link>
+      <Link to="about">
+        <div class="project">Project 4</div>
+      </Link>
     </div>
     <footer>Created by Me ❤️ with <span>Svelte</span></footer>
   </main>
@@ -52,13 +48,7 @@
     font-size: 36px;
   }
 
-  .icons {
-    margin: 50px 0 0 0;
-    cursor: pointer;
-    font-size: 30px;
-  }
-
-  .card {
+  .project {
     font-weight: 700;
     border: 1px dashed transparent;
     display: flex;
@@ -72,18 +62,19 @@
     /* box-shadow 0.3s ease-in-out; */
   }
 
-  .card:hover {
+  .project:hover {
     /* box-shadow: 0px 15px 37px -20px rgba(64, 67, 79, 1); */
     transform: scale(1.04);
     cursor: pointer;
     background: #24262d;
   }
 
-  .cards {
+  .projects {
     /* max-width: 1200px; */
     margin: 50px auto;
     display: grid;
     grid-gap: 1rem;
+    grid-template-columns: 1fr;
   }
 
   footer span {
@@ -95,15 +86,11 @@
       font-size: 48px;
     }
 
-    .icons {
-      font-size: 40px;
+    .projects {
+      grid-template-columns: 1fr;
     }
 
-    .cards {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .cards .card {
+    .projects .project {
       /* height: 100%; */
       min-height: 200px;
     }
@@ -113,8 +100,8 @@
     main {
       max-width: none;
     }
-    .cards {
-      grid-template-columns: repeat(2, 1fr);
+    .projects {
+      grid-template-columns: 1fr;
     }
   }
 </style>
