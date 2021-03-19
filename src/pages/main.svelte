@@ -9,9 +9,9 @@
   <main>
     <h1>Hi!✋ I'm Gianmarco a Front End 💻 based in Italy</h1>
     <div class="icons">
-      <Fa icon={faCog} />
-      <Fa icon={faGithub} />
-      <Fa icon={faLinkedin} />
+      <Fa class="icon" icon={faCog} />
+      <Fa class="icon" icon={faGithub} />
+      <Fa class="icon" icon={faLinkedin} />
     </div>
     <div class="cards">
       <Link to="projects">
@@ -20,12 +20,7 @@
       <Link to="about">
         <div class="card">About</div>
       </Link>
-      <!-- <div class="card">Blog</div> -->
-      <!-- <div class="card">FOUR</div>
-      <div class="card">FIVE</div>
-      <div class="card">SIX</div> -->
     </div>
-    <footer>Created by Me ❤️ with <span>Svelte</span></footer>
   </main>
 </div>
 
@@ -53,9 +48,16 @@
   }
 
   .icons {
-    margin: 50px 0 0 0;
+    margin: 50px 0;
     cursor: pointer;
     font-size: 30px;
+  }
+  .icons :global(.icon) {
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+  }
+  .icons :global(.icon):hover {
+    color: #f3a712;
   }
 
   .card {
@@ -68,27 +70,35 @@
     padding: 1rem;
     height: 4rem;
     border-radius: 5px;
-    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
-    /* box-shadow 0.3s ease-in-out; */
+    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+    /* box-shadow 0.2s ease-in-out; */
   }
 
   .card:hover {
-    /* box-shadow: 0px 15px 37px -20px rgba(64, 67, 79, 1); */
-    transform: scale(1.04);
+    transform: scale(1.03);
     cursor: pointer;
     background: #24262d;
   }
 
   .cards {
     /* max-width: 1200px; */
-    margin: 50px auto;
+    margin: 100px auto;
     display: grid;
     grid-gap: 1rem;
   }
 
+  /* footer {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 30px 0;
+    max-width: 900px;
+    text-align: center;
+    width: 100%;
+  }
+
   footer span {
     color: #ff3e00;
-  }
+  } */
 
   @media (min-width: 900px) {
     main > h1 {

@@ -9,9 +9,18 @@ body {
   background-color: #121317;
   color: white;
   margin: 0;
-  padding: 0 100px;
   box-sizing: border-box;
   font-family: "Fira Code", monospace;
+  display: grid;
+  line-height: 1.75;
+  place-items: center;
+  /* grid-template-rows: 90px auto 88px; */
+}
+
+@media (min-width: 900px) {
+  body {
+    padding: 0 100px;
+  }
 }
 
 a {

@@ -1,38 +1,32 @@
 <script>
   import { Link } from "svelte-navigator";
-  import NavBar from "../components/navbar.svelte";
 </script>
 
-<div class="container">
-  <NavBar />
-  <main>
+<div class="projectContainer">
+  <div class="projects">
     <h1>Projects</h1>
-    <div class="projects">
-      <Link to="projects">
-        <div class="project">Project 1</div>
-      </Link>
-      <Link to="about">
-        <div class="project">Project 22</div>
-      </Link>
-      <Link to="about">
-        <div class="project">Project 3</div>
-      </Link>
-      <Link to="about">
-        <div class="project">Project 4</div>
-      </Link>
-    </div>
-    <footer>Created by Me ❤️ with <span>Svelte</span></footer>
-  </main>
+    <Link to="projects">
+      <div class="project">Project 1</div>
+    </Link>
+    <Link to="about">
+      <div class="project">Project 22</div>
+    </Link>
+    <Link to="about">
+      <div class="project">Project 3</div>
+    </Link>
+    <Link to="about">
+      <div class="project">Project 4</div>
+    </Link>
+  </div>
 </div>
 
 <style>
-  .container {
+  .projectContainer {
+    width: 100%;
     max-width: 900px;
     display: flex;
     justify-content: center;
-  }
 
-  main {
     text-align: center;
     padding: 1em;
     margin: 0 auto;
@@ -43,7 +37,7 @@
     font-weight: 700;
   }
 
-  main > h1 {
+  .projects > h1 {
     margin: 50px 0 0 0;
     font-size: 36px;
   }
@@ -57,9 +51,10 @@
     color: white;
     padding: 1rem;
     height: 4rem;
+    width: 100%;
     border-radius: 5px;
-    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
-    /* box-shadow 0.3s ease-in-out; */
+    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+    /* box-shadow 0.2s ease-in-out; */
   }
 
   .project:hover {
@@ -70,15 +65,11 @@
   }
 
   .projects {
-    /* max-width: 1200px; */
+    width: 100%;
     margin: 50px auto;
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 1fr;
-  }
-
-  footer span {
-    color: #ff3e00;
   }
 
   @media (min-width: 900px) {
