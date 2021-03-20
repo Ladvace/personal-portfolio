@@ -1,7 +1,7 @@
 <script>
   import { onMount, onDestroy } from "svelte";
   import { globalHistory } from "svelte-navigator/src/history";
-  import { Router, Route } from "svelte-navigator";
+  import { Router, Route, link } from "svelte-navigator";
   import NavBar from "./components/navbar.svelte";
   import Main from "./pages/main.svelte";
   import Projects from "./pages/projects.svelte";
@@ -21,7 +21,6 @@
   });
 </script>
 
-<!-- <main> -->
 <Router>
   {#if $currentPath != "/"}
     <NavBar />
@@ -33,14 +32,13 @@
     <Route path="/" exact component={Main} />
     <Route component={NotFound} />
   </div>
-  <footer>Created by Me ❤️ with <span>Svelte</span></footer>
+  <footer>
+    Created by <a class="me" href="about" use:link>Me</a> ❤️ with
+    <span class="svelte">Svelte</span>
+  </footer>
 </Router>
 
-<!-- </main> -->
 <style>
-  /* main {
-    display: grid;
-  } */
   .container {
     display: flex;
     flex-direction: column;
@@ -51,8 +49,6 @@
   }
 
   footer {
-    /* position: absolute; */
-    /* bottom: 0; */
     font-size: 16px;
     font-weight: 400;
     padding: 30px 0;
@@ -61,7 +57,12 @@
     width: 100%;
   }
 
-  footer span {
+  footer .svelte {
     color: #ff3e00;
+  }
+
+  a {
+    text-decoration: none;
+    color: #f3a712;
   }
 </style>

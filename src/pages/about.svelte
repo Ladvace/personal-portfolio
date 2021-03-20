@@ -1,5 +1,4 @@
 <script>
-  import { Link } from "svelte-navigator";
 </script>
 
 <div class="container">
@@ -22,24 +21,27 @@
   }
 
   main {
+    min-height: 500px;
     text-align: center;
     padding: 1em;
     margin: 0 auto;
-    text-align: center;
   }
 
   h1 {
     font-weight: 700;
-  }
-
-  main > h1 {
     margin: 50px 0 0 0;
     font-size: 36px;
   }
 
   @media (min-width: 900px) {
+    main {
+      min-height: calc(100vh - 88px - 90px);
+    }
     main > h1 {
       font-size: 48px;
+    }
+    p {
+      margin: 50px 0 0;
     }
   }
 

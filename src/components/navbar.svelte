@@ -1,9 +1,10 @@
 <script>
+  import { link } from "svelte-navigator";
   import Logo from "../../public/logo.svg";
 </script>
 
 <nav class="NavBar">
-  <a href="/">
+  <a href="/" use:link>
     <Logo class="logo" width="30" />
   </a>
   <div class="buttons">
@@ -25,7 +26,7 @@
     height: 90px;
     max-width: 900px;
     box-sizing: border-box;
-    padding: 20px 0 0 0;
+    padding: 20px;
   }
   .buttons {
     display: flex;
@@ -49,6 +50,7 @@
 
   @media (min-width: 900px) {
     .NavBar {
+      padding: 20px 0 0 0;
       display: flex;
       justify-content: space-between;
       max-width: 900px;

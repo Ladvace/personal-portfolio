@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   position: relative;
@@ -6,7 +10,7 @@ body {
 }
 
 body {
-  background-color: #121317;
+  background-color: #09090b;
   color: white;
   margin: 0;
   box-sizing: border-box;
@@ -14,13 +18,27 @@ body {
   display: grid;
   line-height: 1.75;
   place-items: center;
+  height: 100%;
   /* grid-template-rows: 90px auto 88px; */
+}
+
+::selection {
+  color: white;
+  background: #f3a712;
 }
 
 @media (min-width: 900px) {
   body {
     padding: 0 100px;
   }
+}
+
+.link > :global(a) {
+  text-decoration: none;
+}
+
+:global(a) {
+  text-decoration: none;
 }
 
 a {

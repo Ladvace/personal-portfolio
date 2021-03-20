@@ -26,7 +26,7 @@
     max-width: 900px;
     display: flex;
     justify-content: center;
-
+    box-sizing: border-box;
     text-align: center;
     padding: 1em;
     margin: 0 auto;
@@ -37,12 +37,20 @@
     font-weight: 700;
   }
 
+  .projectContainer .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+    margin-top: 30px;
+  }
+
   .projects > h1 {
-    margin: 50px 0 0 0;
+    margin: 0;
     font-size: 36px;
   }
 
   .project {
+    box-sizing: border-box;
     font-weight: 700;
     border: 1px dashed transparent;
     display: flex;
@@ -73,8 +81,12 @@
   }
 
   @media (min-width: 900px) {
-    main > h1 {
+    .projectContainer {
+      padding: 0;
+    }
+    .projects > h1 {
       font-size: 48px;
+      margin: 50px 0 0 0;
     }
 
     .projects {
@@ -88,9 +100,6 @@
   }
 
   @media (min-width: 600px) {
-    main {
-      max-width: none;
-    }
     .projects {
       grid-template-columns: 1fr;
     }
