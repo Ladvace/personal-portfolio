@@ -27,6 +27,22 @@ body {
   background: #f3a712;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fafffd;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #09090b;
+  border-radius: 1px;
+}
+
 @media (min-width: 900px) {
   body {
     padding: 0 100px;
