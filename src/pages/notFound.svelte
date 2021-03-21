@@ -5,7 +5,7 @@
   <main>
     <div>
       <h1>404</h1>
-      <h1>Page not Found</h1>
+      <h3>Page not Found</h3>
     </div>
   </main>
 </div>
@@ -29,13 +29,15 @@
   }
 
   h1 {
+    margin: 0;
     font-weight: 700;
     font-size: 36px;
   }
 
   main > div {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
   }
 
