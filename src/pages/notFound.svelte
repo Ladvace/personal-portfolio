@@ -1,10 +1,7 @@
 <script>
-  import { Link } from "svelte-navigator";
-  import NavBar from "../components/navbar.svelte";
 </script>
 
 <div class="container">
-  <NavBar />
   <main>
     <div>
       <h1>404</h1>
@@ -21,6 +18,7 @@
   }
 
   main {
+    min-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,6 +40,9 @@
   }
 
   @media (min-width: 900px) {
+    main {
+      min-height: calc(100vh - 48px - 90px);
+    }
     h1 {
       font-size: 48px;
     }

@@ -5,10 +5,9 @@
   <main>
     <h1>About</h1>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis itaque
-      consequuntur nostrum soluta harum corporis, dignissimos veritatis magni
-      distinctio ad eveniet odio quae unde vel ullam nihil tempore quis
-      doloremque?
+      Hi, I'm Gianmarco, a front-end developer based in Italy. I'm a javascript
+      and web technologies enthusiast with a strong focus on UI/UX. I'm active
+      in open-source community.
     </p>
   </main>
 </div>
@@ -35,7 +34,7 @@
 
   @media (min-width: 900px) {
     main {
-      min-height: calc(100vh - 88px - 90px);
+      min-height: calc(100vh - 48px - 90px);
     }
     main > h1 {
       font-size: 48px;

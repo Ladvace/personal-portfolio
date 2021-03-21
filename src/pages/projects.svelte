@@ -1,22 +1,45 @@
 <script>
-  import { Link } from "svelte-navigator";
+  import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+  import Fa from "svelte-fa";
 </script>
 
 <div class="projectContainer">
   <div class="projects">
     <h1>Projects</h1>
-    <Link to="projects">
-      <div class="project">Project 1</div>
-    </Link>
-    <Link to="about">
-      <div class="project">Project 22</div>
-    </Link>
-    <Link to="about">
-      <div class="project">Project 3</div>
-    </Link>
-    <Link to="about">
-      <div class="project">Project 4</div>
-    </Link>
+    <a href="https://github.com/gorilla-devs/GDLauncher">
+      <div class="project">
+        <div class="header">
+          <h2>GDLauncher <Fa icon={faExternalLinkAlt} /></h2>
+          <h4>Languages/Tech: Node, React, Redux, Electron...</h4>
+        </div>
+        <p>
+          GDLauncher is a simple, yet powerful Minecraft custom launcher with a
+          strong focus on the user experience
+        </p>
+        <!-- <Button>CIAO</Button> -->
+      </div>
+    </a>
+    <a href="https://github.com/Ladvace/WiseMan-DiscordBot">
+      <div class="project">
+        <div class="header">
+          <h2>WiseMan Discord Bot <Fa icon={faExternalLinkAlt} /></h2>
+          <h4>Languages/Tech: Node, FireBase/MongoDb</h4>
+        </div>
+        <p>
+          The wiseMan bot allows you to level up based on the time you spend in
+          a vocal channel
+        </p>
+      </div>
+    </a>
+    <a href="https://github.com/Ladvace/easy-react-carousel">
+      <div class="project">
+        <div class="header">
+          <h2>easy-react-carousel <Fa icon={faExternalLinkAlt} /></h2>
+          <h4>Languages/Tech: React</h4>
+        </div>
+        <p>A simple carousel made in reactjs</p>
+      </div>
+    </a>
   </div>
 </div>
 
@@ -33,8 +56,13 @@
     text-align: center;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   h1 {
     font-weight: 700;
+    text-align: start;
   }
 
   .projectContainer .projects {
@@ -50,6 +78,7 @@
   }
 
   .project {
+    text-align: start;
     box-sizing: border-box;
     font-weight: 700;
     border: 1px dashed transparent;
@@ -57,17 +86,19 @@
     flex-direction: column;
     background-color: #1b1c22;
     color: white;
-    padding: 1rem;
-    height: 4rem;
+    padding: 2rem;
     width: 100%;
     border-radius: 5px;
     transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
-    /* box-shadow 0.2s ease-in-out; */
+  }
+
+  .project p {
+    font-weight: 100;
   }
 
   .project:hover {
-    /* box-shadow: 0px 15px 37px -20px rgba(64, 67, 79, 1); */
-    transform: scale(1.04);
+    border: 1px dashed white;
+    transform: scale(1.01);
     cursor: pointer;
     background: #24262d;
   }

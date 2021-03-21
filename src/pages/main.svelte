@@ -1,15 +1,17 @@
 <script>
   import { link } from "svelte-navigator";
-  import { faCog } from "@fortawesome/free-solid-svg-icons";
+  import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
   import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
   import Fa from "svelte-fa";
 </script>
 
 <div class="container">
   <main>
-    <h1>Hi!✋ I'm Gianmarco a Front End 💻 based in Italy</h1>
+    <h1>Hi!✋ I'm Gianmarco a Front-End Developer 💻 based in Italy</h1>
     <div class="icons">
-      <Fa class="icon" icon={faCog} />
+      <a href="mailto:cavallogianmarco@gmail.com" target="_blank">
+        <Fa class="icon" icon={faEnvelope} />
+      </a>
       <a href="https://github.com/Ladvace" target="_blank">
         <Fa class="icon" icon={faGithub} />
       </a>

@@ -4,7 +4,6 @@
   import Logo from "../../public/logo.svg";
 
   let opened = false;
-  $: console.log(opened);
 </script>
 
 <nav class={opened ? "NavBar open" : "NavBar"}>
@@ -16,15 +15,15 @@
       <Burger bind:open={opened} />
     </div>
     <div class="buttons">
-      <a class="button" href="/">Home</a>
-      <a class="button" href="/projects">Projects</a>
-      <a class="button" href="/about">About</a>
+      <a class="button" href="/" use:link>Home</a>
+      <a class="button" href="/projects" use:link>Projects</a>
+      <a class="button" href="/about" use:link>About</a>
     </div>
   </div>
   <div class="responsiveButtons buttons">
-    <a class="button" href="/">Home</a>
-    <a class="button" href="/projects">Projects</a>
-    <a class="button" href="/about">About</a>
+    <a class="button" href="/" use:link>Home</a>
+    <a class="button" href="/projects" use:link>Projects</a>
+    <a class="button" href="/about" use:link>About</a>
   </div>
 </nav>
 

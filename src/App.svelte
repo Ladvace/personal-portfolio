@@ -29,7 +29,7 @@
     <Route path="projects" component={Projects} />
     <Route path="about" component={About} />
 
-    <Route path="/" exact component={Main} />
+    <Route path="/" component={Main} />
     <Route component={NotFound} />
   </div>
   <footer>
@@ -51,7 +51,7 @@
   footer {
     font-size: 16px;
     font-weight: 400;
-    padding: 30px 0;
+    padding: 10px 0;
     max-width: 900px;
     text-align: center;
     width: 100%;
